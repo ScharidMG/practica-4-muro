@@ -63,3 +63,37 @@ resource "google_cloud_run_v2_service_iam_member" "backend_publico" {
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
+
+resource "google_service_account" "frontend" {
+  account_id   = "${var.prefijo}-frontend"
+  display_name = "Frontend del muro"
+  depends_on   = [google_project_service.apis]
+}
+
+resource "google_cloud_run_v2_service" "frontend" {
+  name                = "${var.prefijo}-frontend"
+  location            = var.region
+  deletion_protection = false
+  depends_on          = [google_project_service.apis]
+
+  template {
+    service_account = google_service_account.frontend.email
+    containers {
+      image = var.imagen_frontend
+      env {
+        name  = "BACKEND_URL"
+        value = google_cloud_run_v2_service.backend.uri
+      }
+    }
+    scaling {
+      max_instance_count = 2
+    }
+  }
+}
+
+resource "google_cloud_run_v2_service_iam_member" "frontend_publico" {
+  name     = google_cloud_run_v2_service.frontend.name
+  location = google_cloud_run_v2_service.frontend.location
+  role     = "roles/run.invoker"
+  member   = "allUsers"
+}
