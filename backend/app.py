@@ -2,6 +2,7 @@
 import os, uuid
 from flask import Flask, request, jsonify
 from google.cloud import firestore
+from google.api_core.exceptions import NotFound
 
 app = Flask(__name__)
 db = firestore.Client(database=os.environ.get("BASE_DATOS", "(default)"))
@@ -26,7 +27,15 @@ def listar():
     consulta = (db.collection("mensajes")
                   .order_by("creado", direction=firestore.Query.DESCENDING)
                   .limit(20))
-    mensajes = [{"autor": d.get("autor"), "texto": d.get("texto")} for d in consulta.stream()]
+    mensajes = []
+    for d in consulta.stream():
+        campos = d.to_dict()
+        mensajes.append({
+            "id": d.id,
+            "autor": campos.get("autor"),
+            "texto": campos.get("texto"),
+            "likes": campos.get("likes", 0),   # los mensajes viejos no tienen el campo
+        })
     return jsonify(instancia=INSTANCIA, mensajes=mensajes)
 
 
@@ -41,5 +50,17 @@ def crear():
         "autor": autor,
         "texto": texto,
         "creado": firestore.SERVER_TIMESTAMP,
+        "likes": 0,
     })
     return jsonify(ok=True, instancia=INSTANCIA), 201
+
+
+@app.post("/mensajes/<id_mensaje>/like")
+def dar_like(id_mensaje):
+    documento = db.collection("mensajes").document(id_mensaje)
+    try:
+        # Increment suma en el servidor: no hay que leer antes y no se pierden votos simultaneos
+        documento.update({"likes": firestore.Increment(1)})
+    except NotFound:
+        return jsonify(error="ese mensaje no existe"), 404
+    return jsonify(ok=True, instancia=INSTANCIA)
