@@ -77,6 +77,7 @@ resource "google_cloud_run_v2_service" "frontend" {
   depends_on          = [google_project_service.apis]
 
   template {
+    max_instance_request_concurrency = 80
     service_account = google_service_account.frontend.email
     containers {
       image = var.imagen_frontend
