@@ -1,7 +1,14 @@
 # Muro de mensajes
 
 **Equipo:**
-**Proyecto de Google Cloud:**
+
+| Integrante | Código |
+|---|---|
+| Michell Mahecha | 1152407 |
+| Cristian Zambrano | 1152408 |
+| Scharid Maldonado | 1152418 |
+
+**Proyecto de Google Cloud:** computanube
 **URL del muro:**
 
 ## Diagrama
@@ -12,6 +19,7 @@ flowchart LR
 ```
 
 ## Fase 0. Preparación
+![Evidencia 0](./Evidencias/Evidencia0.png)
 
 ## Fase 1. Las imágenes
 
