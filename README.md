@@ -26,6 +26,9 @@ flowchart LR
 ![Evidencia 1b](./Evidencias/Evidencia1b.png)
 
 ## Fase 2. Los cimientos
+![Evidencia 2a](./Evidencias/Evidencia2a.png)
+![Evidencia 2b](./Evidencias/Evidencia2b.png)
+![Evidencia 2c](./Evidencias/Evidencia2c.png)
 
 ## Fase 3. El backend
 
