@@ -38,6 +38,9 @@ flowchart LR
 ![Evidencia 4](./Evidencias/Evidencia4.jpeg)
 
 ## Fase 5. El estado vive afuera
+![Evidencia 5a](./Evidencias/Evidencia5a.png)
+![Evidencia 5b](./Evidencias/Evidencia5b.png)
+![Evidencia 5c](./Evidencias/Evidencia5c.png)
 
 ## Fase 6. Reto
 
