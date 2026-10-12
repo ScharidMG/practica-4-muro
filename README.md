@@ -35,6 +35,7 @@ flowchart LR
 ![Evidencia 3b](./Evidencias/Evidencia3b.png)
 
 ## Fase 4. El frontend, conectado
+![Evidencia 4](./Evidencias/Evidencia4.png)
 
 ## Fase 5. El estado vive afuera
 
