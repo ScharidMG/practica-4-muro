@@ -181,8 +181,30 @@ document.getElementById("enviar").onclick = async () => {
   }
 };
 
+// Refresco: cada 30 s (antes 5 s) y solo mientras la pestaña está visible.
+const INTERVALO = 10000;
+let temporizador = null;
+
+function iniciar() {
+  if (!temporizador) temporizador = setInterval(cargar, INTERVALO);
+}
+
+function detener() {
+  clearInterval(temporizador);
+  temporizador = null;
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    detener();
+  } else {
+    cargar();     // al volver a la pestaña, se pone al día de una vez
+    iniciar();
+  }
+});
+
 cargar();
-setInterval(cargar, 5000);
+iniciar();
 </script>
 </body>
 </html>
