@@ -1,3 +1,9 @@
+data "google_project" "actual" {}
+
+   locals {
+     url_frontend = "https://${var.prefijo}-frontend-${data.google_project.actual.number}.${var.region}.run.app"
+   }
+
 resource "google_project_service" "apis" {
   for_each = toset([
     "run.googleapis.com",
@@ -51,6 +57,10 @@ resource "google_cloud_run_v2_service" "backend" {
         name  = "BASE_DATOS"
         value = google_firestore_database.db.name
       }
+      env {
+           name  = "ORIGEN_PERMITIDO"
+           value = local.url_frontend
+         }
     }
     scaling {
       max_instance_count = 3

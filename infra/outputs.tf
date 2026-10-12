@@ -7,5 +7,5 @@ output "url_backend" {
 }
 
 output "url_frontend" {
-  value = google_cloud_run_v2_service.frontend.uri
+     value = local.url_frontend
 }

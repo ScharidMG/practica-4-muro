@@ -43,6 +43,9 @@ flowchart LR
 ![Evidencia 5c](./Evidencias/Evidencia5c.png)
 
 ## Fase 6. Reto
+-funcionalidad nueva: dejar corazones en mensajes
+![Evidencia 6a](./Evidencias/Evidencia6a.png)
+-romper ciclo CORS
 
 ### Decisiones
 
