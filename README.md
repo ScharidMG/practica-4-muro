@@ -22,6 +22,8 @@ flowchart LR
 ![Evidencia 0](./Evidencias/Evidencia0.png)
 
 ## Fase 1. Las imágenes
+![Evidencia 1a](./Evidencias/Evidencia1a.png)
+![Evidencia 1b](./Evidencias/Evidencia1b.png)
 
 ## Fase 2. Los cimientos
 
