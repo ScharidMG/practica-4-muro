@@ -1,0 +1,2 @@
+proyecto = "computanube"
+prefijo  = "maldonado"
