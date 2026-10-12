@@ -9,7 +9,7 @@
 | Scharid Maldonado | 1152418 |
 
 **Proyecto de Google Cloud:** computanube
-**URL del muro:**
+**URL del muro:** https://maldonado-frontend-339396341543.us-central1.run.app
 
 ## Diagrama
 
@@ -46,6 +46,7 @@ flowchart LR
 -funcionalidad nueva: dejar corazones en mensajes
 ![Evidencia 6a](./Evidencias/Evidencia6a.png)
 -romper ciclo CORS
+![Evidencia 6b](./Evidencias/Evidencia6b.png)
 
 ### Decisiones
 
