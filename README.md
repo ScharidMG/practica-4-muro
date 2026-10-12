@@ -31,6 +31,8 @@ flowchart LR
 ![Evidencia 2c](./Evidencias/Evidencia2c.png)
 
 ## Fase 3. El backend
+![Evidencia 3a](./Evidencias/Evidencia3a.png)
+![Evidencia 3b](./Evidencias/Evidencia3b.png)
 
 ## Fase 4. El frontend, conectado
 
