@@ -49,11 +49,15 @@ flowchart LR
 ![Evidencia 6b](./Evidencias/Evidencia6b.png)
 -gastar menos lecturas
 
-  ---Antes
+   ---Antes
 ![Evidencia 6c](./Evidencias/Evidencia6c.png)
 
-  ---Despues
+   ---Despues
 ![Evidencia 6d](./Evidencias/Evidencia6d.png)
+
+-Reproduccion desde cero
+![Evidencia 6e](./Evidencias/Evidencia6e.png)
+
 ### Decisiones
 
 ### Preguntas
