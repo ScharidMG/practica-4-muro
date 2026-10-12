@@ -48,10 +48,12 @@ flowchart LR
 -romper ciclo CORS
 ![Evidencia 6b](./Evidencias/Evidencia6b.png)
 -gastar menos lecturas
+
   ---Antes
 ![Evidencia 6c](./Evidencias/Evidencia6c.png)
 
   ---Despues
+![Evidencia 6d](./Evidencias/Evidencia6d.png)
 ### Decisiones
 
 ### Preguntas

@@ -1,4 +1,4 @@
 proyecto = "computanube"
 prefijo  = "maldonado"
 imagen_backend = "us-central1-docker.pkg.dev/computanube/maldonado-imagenes/backend:v2"
-imagen_frontend = "us-central1-docker.pkg.dev/computanube/maldonado-imagenes/frontend:v2"
+imagen_frontend = "us-central1-docker.pkg.dev/computanube/maldonado-imagenes/frontend:v3"
